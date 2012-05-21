@@ -2,7 +2,7 @@
 /*
 Plugin Name: Navegg
 Plugin URI: http://www.navegg.com/en/wordpress
-Description: Navegg's Plugin for WordPress automatically insert our tag on every page of your website - eliminating your configuration work. Sign up Navegg on our website to get your Navegg ID, so we can start targeting your visitors.
+Description: Know your website's audience by gender, age, income, purchase intent and much more.
 Version: 1.0
 Author:Navegg
 Author URI: http://www.navegg.com/

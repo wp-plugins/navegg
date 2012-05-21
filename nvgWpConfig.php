@@ -14,15 +14,6 @@ private static $info;
  * Função de inicialização
  */
 function inicializar(){
-  //Mapear objeto para manipular o banco 
-  // global $wpdb;
-  // NvgWp::$wpdb = $wpdb;
-  /** Com $wpdb você manipula o banco de dados agora ele esta referenciado em uma variavel estática da classe.
-   * Para utiliza-la agora não precisa declarar global $wpdb em todas funções, basta usar a estica da classe. 
-   * Ex.: NvgWp::$wpdb->
-   * Esta variavel não está sendo usado no momento, pois na v1.0 o id é amazenado na tablea options padrão do Wp. Para futuras versões basta descomentar a linhas que possuem $wpdb
-   */
-
   //Mapear infos relevantes para plugin
   NvgWp::$info['plugin_fpath']= dirname(__FILE__);
 
@@ -70,10 +61,7 @@ function desinstalar(){
  */
 function createAdmNvg(){
 
- add_menu_page('Navegg - Optimeze. Results.','Navegg',10,'nvg-admin',array('NvgWp','admInit'),plugins_url( '/contents/favicon.ico', __FILE__ ));
-
- /* Exmplo com submenu para outra funcionalidade...
-  add_submenu_page('nvg-admin','Navegg - Optimeze. Results. - Painel ','Painel','manage_options','nvg-adm-rel',array('NvgWp','admInit'));*/
+ add_menu_page('Navegg','Navegg',10,'nvg-admin',array('NvgWp','admInit'),plugins_url( '/contents/favicon.ico', __FILE__ ));
 
 }
 
@@ -135,19 +123,6 @@ function idIsDiference($id){
    else
       return true;
 }
-
-
-/**
- * Exemplo de como ficaria com submenu para outra funcionalidade
- *
- */
-/*
-function admPainel(){
- echo 'Implementar um painel navegg para Wp';
-}
-*/
-
-
 
 
 
@@ -212,7 +187,6 @@ function echoMsgNotId(){
            <p>'.getTextNvg('nvgMsgAdmNotId_1').' <a href="admin.php?page=nvg-admin">'.getTextNvg('nvgMsgAdmNotId_2').'</a> '.getTextNvg('nvgMsgAdmNotId_3').'</p>
           </div>';
 
-//	echo 'teste';	  
 }
 
 
