@@ -15,10 +15,10 @@ $nvgTexts['nvgMsgAdmIdAlt_4']='ID digitado é igual o armazenado! Para salvar um
 
 // Mensagem padrão de alerta wordpress! Ativada quando não tem id cadastrado
 
-$nvgTexts['nvgMsgAdmNotId_1']='Falta pouco para você começar a segmentar sua audiência!';
+$nvgTexts['nvgMsgAdmNotId_1']='Falta pouco para você conhecer sua audiência!';
 
 
-$nvgTexts['nvgMsgAdmNotId_2']='Insira seu ID no campo "Seu ID Navegg"';
+$nvgTexts['nvgMsgAdmNotId_2']='Insira seu ID';
 
 
 $nvgTexts['nvgMsgAdmNotId_3']='para que seus visitantes comecem a ser analisados.';
@@ -30,53 +30,53 @@ $nvgTexts['nvgMsgAdmNotId_3']='para que seus visitantes comecem a ser analisados
 
 //Sobre
 
-$nvgTexts['nvgMsgAdmInitAbout_1']='Sobre a Navegg';
+$nvgTexts['nvgMsgAdmInitAbout_1']='Sobre o Navegg Analytics';
 
-$nvgTexts['nvgMsgAdmInitAbout_2']='Conheça sua audiência e personaliza seu site';
+$nvgTexts['nvgMsgAdmInitAbout_2']='Relatórios completos para você conhecer em detalhes o perfil de quem acessa seu site';
 
-$nvgTexts['nvgMsgAdmInitAbout_3']='A Navegg é a líder latino-americana em segmentação de audiência online. Através da análise de comportamento de navegação, nossas soluções criam segmentos de audiência preparados para receber conteúdo e publicidade personalizados.';
+$nvgTexts['nvgMsgAdmInitAbout_3']='O Navegg Analytics é um produto da Navegg, líder e referência do mercado latinoamericano em dados de audiência online. Com o Navegg Analytics, você entenderá como são os visitantes que acessam o seu site.';
 
-$nvgTexts['nvgMsgAdmInitAbout_4']='Segmentação com inteligência de rede:';
+$nvgTexts['nvgMsgAdmInitAbout_4']='Informações sobre seu público:';
 
-$nvgTexts['nvgMsgAdmInitAbout_5']='A Navegg leva em conta o que o internauta faz em toda rede e não apenas em seu site. Dessa forma, você terá acesso a informações como intenções de compra e conteúdos de interesse dos seus visitantes, permitindo uma visão mais completa e profunda sobre sua audiência. Segmentamos internautas de acordo com 9 critérios, como faixa etária, gênero, escolaridade, dispositivos, localização, assuntos de interesse, intenções de compra e muito mais.';
+$nvgTexts['nvgMsgAdmInitAbout_5']='Com o Navegg Analytics seus visitantes passarão a ser analisados de acordo com até 9 critérios. São eles: gênero, faixa etária, escolaridade, classe social, estado civil, localização, dispositivos, assuntos de interesse e intenção de compra. Assim, você terá o perfil completo de sua audiência e poderá usar essas informações para guiar sua produção de conteúdo, descobrir se o público que você está trazendo para o seu site é aquele que você quer atingir e muito mais.';
 
-$nvgTexts['nvgMsgAdmInitAbout_6']='Painel de Controle:';
+$nvgTexts['nvgMsgAdmInitAbout_6']='Dashboard online:';
 
-$nvgTexts['nvgMsgAdmInitAbout_7']='Por mais de nicho que seja seu site, a segmentação de audiência pode trazer grandes surpresas sobre quem acessa sua página. Para auxiliá-lo nessas descobertas, todas as informações sobre seus visitantes poderão ser acessadas através do Painel de Controle Navegg.';
+$nvgTexts['nvgMsgAdmInitAbout_7']='O Navegg Analytics conta com relatórios online onde você tem acesso a todas as informações disponíveis sobre quem acessa seu site: tanto números sobre o tráfego de visitantes, quanto perfis sócio-demográficos, interesses e intenções de compra. Com dados tão interessantes sobre sua audiência, as decisões relacionadas a produção de conteúdo, publicidade e muito mais ficará mais simples.';
 
-$nvgTexts['nvgMsgAdmInitAbout_8']='Vantagens:';
+$nvgTexts['nvgMsgAdmInitAbout_8']='Criação de canais e Insights:';
 
-$nvgTexts['nvgMsgAdmInitAbout_9']='Com as informações que a Navegg oferece, é possível guiar a produção de conteúdo, definir o layout mais apropriado e ter argumentos consistentes para vender o espaço publicitário do seu site. Além disso, você pode fazer ofertas personalizadas de conteúdo e publicidade, internauta por internauta. Assim, o visitante passa mais tempo no seu site, aumentando a audiência e a taxa de cliques em anúncios - e, consequentemente, o seu faturamento com publicidade.';
+$nvgTexts['nvgMsgAdmInitAbout_9']='Com o Navegg Analytics, você pode criar relatórios específicos para até 10 seções do seu site, como seções de esportes, notícias, contato, entre outros. Com relatórios personalizados para cada uma delas, você conhecerá fatias específicas do seu público, de acordo com as suas necessidades. Além disso, o recurso Insights permitirá que você faça uma análise de seus concorrentes, entenda a evolução de um determinado tema e, mais importante, compare os seus resultados aos de sites semelhantes ao seu.';
 
 
 $nvgTexts['nvgMsgAdmInitAbout_10']='Links:';
 
 $nvgTexts['nvgMsgAdmInitAbout_11']='Documentação';
 
-$nvgTexts['nvgMsgAdmInitAbout_11_link']='http://www.navegg.com/area-de-clientes/documentacao/';
+$nvgTexts['nvgMsgAdmInitAbout_11_link']='http://www.navegganalytics.com/documentacao/';
 
-$nvgTexts['nvgMsgAdmInitAbout_12']='Soluções';
+$nvgTexts['nvgMsgAdmInitAbout_12']='Recursos';
 
-$nvgTexts['nvgMsgAdmInitAbout_12_link']='http://www.navegg.com/solucoes/';
+$nvgTexts['nvgMsgAdmInitAbout_12_link']='http://www.navegganalytics.com/recursos/';
 
 $nvgTexts['nvgMsgAdmInitAbout_13']='Blog';
 
-$nvgTexts['nvgMsgAdmInitAbout_13_link']='http://www.navegg.com/blog/';
+$nvgTexts['nvgMsgAdmInitAbout_13_link']='http://www.navegganalytics.com/blog/';
 
 $nvgTexts['nvgMsgAdmInitAbout_14']='FAQ';
 
-$nvgTexts['nvgMsgAdmInitAbout_14_link']='http://www.navegg.com/solucoes/faq/';
+$nvgTexts['nvgMsgAdmInitAbout_14_link']='http://www.navegganalytics.com/documentacao/faq/';
 
 $nvgTexts['nvgMsgAdmInitAbout_15']='Planos';
 
-$nvgTexts['nvgMsgAdmInitAbout_15_link']='http://www.navegg.com/comece-agora/?utm_campaign=assine&utm_medium=naveggcom&utm_source=pluginwp';
+$nvgTexts['nvgMsgAdmInitAbout_15_link']='http://www.navegganalytics.com/comece-agora/?utm_campaign=assine&utm_medium=naveggcom&utm_source=pluginwp';
 
 $nvgTexts['nvgMsgAdmInitAbout_16']='Contato';
 
 $nvgTexts['nvgMsgAdmInitAbout_16_link']='http://www.navegg.com/a-empresa/contato/';
 
 
-// Box Seu ID Navegg
+// Box Seu ID Navegg Analytics
 
 
 //Script's
@@ -87,19 +87,19 @@ $nvgTexts['nvgMsgAdmInitYourIdAlert_1']='Por favor digite os números do seu ID!
 //HTML
 
 
-$nvgTexts['nvgMsgAdmInitYourId']='Seu ID Navegg';
+$nvgTexts['nvgMsgAdmInitYourId']='Configurações';
 
-$nvgTexts['nvgMsgAdmInitYourId_1']='ID ativo';
+$nvgTexts['nvgMsgAdmInitYourId_1']='ativo';
 
-$nvgTexts['nvgMsgAdmInitYourId_2']='ID inativo';
+$nvgTexts['nvgMsgAdmInitYourId_2']='inativo';
 
-$nvgTexts['nvgMsgAdmInitYourId_3']='Basta inserir o';
+$nvgTexts['nvgMsgAdmInitYourId_3']='Insira seu';
 
-$nvgTexts['nvgMsgAdmInitYourId_4']='que foi enviado para o seu e-mail no campo "Seu ID Navegg" para que a nossa tag seja ativada em seu site e seus visitantes comecem a ser segmentados.';
+$nvgTexts['nvgMsgAdmInitYourId_4']='para que a nossa tag seja ativada em seu site:';
 
 $nvgTexts['nvgMsgAdmInitYourId_5']='digite seu ID';
 
-$nvgTexts['nvgMsgAdmInitYourId_6']='SALVAR';
+$nvgTexts['nvgMsgAdmInitYourId_6']='Salvar';
 
 $nvgTexts['nvgMsgAdmInitYourId_7']='Salvar Alterações';
 
@@ -107,20 +107,62 @@ $nvgTexts['nvgMsgAdmInitYourId_8']='Como funciona o ID Navegg?';
 
 $nvgTexts['nvgMsgAdmInitYourId_8_link']='http://www.navegg.com/area-de-clientes/documentacao/navegg-em-seu-site/';
 
-$nvgTexts['nvgMsgAdmInitYourId_9']='Não possui seu ID Navegg?';
+$nvgTexts['nvgMsgAdmInitYourId_9']='Não possui conta no Navegg Analytics?';
 
 $nvgTexts['nvgMsgAdmInitYourId_10']='Cadastre-se agora';
 
 $nvgTexts['nvgMsgAdmInitYourId_9_10_link']='http://www.navegg.com/comece-agora/?utm_campaign=assine&utm_medium=naveggcom&utm_source=pluginwp';
 
+$nvgTexts['nvgMsgAdmInitYourId_11']='Não sabe seu ID? Digite seu e-mail para localizarmos:';
+
+$nvgTexts['nvgMsgAdmInitYourId_12']='Localizar';
+
+
+
+
+// Conta
+
+$nvgTexts['nvgMsgAdmInitAccount_1']='Crie sua conta';
+
+$nvgTexts['nvgMsgAdmInitAccount_2']='Crie agora mesmo sua conta no Navegg Analytics:';
+
+$nvgTexts['nvgMsgAdmInitAccount_3']='Nome:';
+
+$nvgTexts['nvgMsgAdmInitAccount_4']='E-mail:';
+
+$nvgTexts['nvgMsgAdmInitAccount_5']='Nome do site:';
+
+$nvgTexts['nvgMsgAdmInitAccount_6']='URL do site:';
+
+$nvgTexts['nvgMsgAdmInitAccount_7']='Criar conta';
 
 // Box Painel
 
 
 $nvgTexts['nvgMsgAdmInitPainel_1']='Clique aqui';
 
-$nvgTexts['nvgMsgAdmInitPainel_1_link']='http://navegg.com/panel';
+$nvgTexts['nvgMsgAdmInitPainel_1_link']='http://analytics.navegg.com/';
 
-$nvgTexts['nvgMsgAdmInitPainel_2']='para acessar seu Painel de Controle Navegg e acessar relatórios completos sobre seus visitantes.';
+$nvgTexts['nvgMsgAdmInitPainel_2']='para acessar relatórios completos sobre seus visitantes.';
 
+$nvgTexts['nvgMsgAdmInitPainel_3']='Relatórios';
+
+
+// Erros
+
+$nvgTexts['nvgMsgAdmInitError_1']='ID inválido. Insira novamente seu ID.';
+
+$nvgTexts['nvgMsgAdmInitError_2']='E-mail não cadastrado.';
+
+$nvgTexts['nvgMsgAdmInitError_3']='Por favor, informe seu nome.';
+
+$nvgTexts['nvgMsgAdmInitError_4']='Por favor, informe seu e-mail.';
+
+$nvgTexts['nvgMsgAdmInitError_5']='Por favor, entre com um e-mail válido.';
+
+$nvgTexts['nvgMsgAdmInitError_6']='Não foi possível acessar o webservice!';
+
+$nvgTexts['nvgMsgAdmInitError_7']='Ops! Ocorreu um erro ao tentar criar uma nova conta.';
+
+$nvgTexts['nvgMsgAdmInitError_8']='Nome ou E-mail em branco';
 ?>

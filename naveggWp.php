@@ -1,16 +1,16 @@
 <?php
 /*
-Plugin Name: Navegg
+Plugin Name: Navegg Analytics
 Plugin URI: http://www.navegg.com/en/wordpress
 Description: Know your website's audience by gender, age, income, purchase intent and much more.
-Version: 1.0
-Author:Navegg
-Author URI: http://www.navegg.com/
+Version: 2.0
+Author:Navegg 
+Author URI: http://www.navegganalytics.com
 License: GPLv2
 */
 
 /*
- *      Copyright 2012 Navegg <contact@navegg.com>
+ *      Copyright 2013 Navegg <contact@navegg.com>
  *
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
