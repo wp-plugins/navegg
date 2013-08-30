@@ -5,7 +5,7 @@ Donate link: http://www.navegg.com/en
 Tags: audience targeting, online audience, audience segmentation, behavioral targeting, web analytics, analytics, demographics, bt
 Requires at least: 2.0.2
 Tested up to: 3.5.1
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,6 +62,8 @@ http://www.navegg.com/en/solution/faq/
 * Added the option to get the Navegg's ID by email registered.
 * Added the option to create new the Navegg's account from wordpress.
 * Added the option to automatic login for new accounts created from wordpress.
+= 2.1 =
+* bug fix language English
 
 == Upgrade Notice ==
 = 1.0 =
@@ -70,6 +72,10 @@ http://www.navegg.com/en/solution/faq/
 = 2.0 =
 *  Navegg's tag on your site will be changed, as they are available new analysis criteria, such as Brands, Occupation and Behavior. Also a new list of more than 700 segments is available now. That means you'll have even more information about your website audience.
 * You can create your Navegg account directly through the plugin. If you already have a Navegg account, retrieve your Navegg ID using the registered email.
+
+= 2.1 =
+* bug fix language English
+
 
 `<?php code(); // goes in backticks ?>`
 
