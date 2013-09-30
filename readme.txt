@@ -5,7 +5,7 @@ Donate link: http://www.navegg.com/en
 Tags: audience targeting, online audience, audience segmentation, behavioral targeting, web analytics, analytics, demographics, bt
 Requires at least: 2.0.2
 Tested up to: 3.5.1
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,9 @@ http://www.navegg.com/en/solution/faq/
 = 2.1 =
 * bug fix language English
 
+= 2.2 =
+* bug fix javascript on link to create new account
+
 == Upgrade Notice ==
 = 1.0 =
 * This version automatically inserts Navegg's tag on every page of your website.
@@ -76,6 +79,8 @@ http://www.navegg.com/en/solution/faq/
 = 2.1 =
 * bug fix language English
 
+= 2.2 =
+* bug fix javascript on link to create new account
 
 `<?php code(); // goes in backticks ?>`
 

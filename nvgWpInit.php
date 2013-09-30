@@ -160,7 +160,7 @@
 				?>
 
 				<li class="r">
-					<a href="javascript:document.getElementById('containerNewAccount').style.display = 'block'"  target="_blank">
+					<a href="javascript:void(0)" onClick="document.getElementById('containerNewAccount').style.display = 'block'" >
 						<?php echo getTextNvg('nvgMsgAdmInitYourId_9'); ?> 
 						<span><?php echo getTextNvg('nvgMsgAdmInitYourId_10'); ?></span>
 					</a>
