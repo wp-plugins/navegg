@@ -1,4 +1,3 @@
-                                            
 === Plugin Name ===
 Contributors: Navegg
 Donate link: http://www.navegg.com/
@@ -69,6 +68,9 @@ http://www.navegg.com/en/client-area/faq/
 
 = 2.2 =
 * bug fix javascript on link to create new account
+
+= 3.0 =
+* Links fixed.
 
 == Upgrade Notice ==
 
