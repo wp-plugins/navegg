@@ -12,13 +12,13 @@ Know your website's audience by gender, age, income, purchase intent and much mo
 
 == Description ==
 
-Navegg is a leading provider of online audience targeting solutions. Through the analysis of browsing behaviors, Navegg solutions create audience segments prepared to receive personalized content and advertising, anywhere on the web.
+Founded in 2008, Navegg is Latin America's largest data marketplace and the standard audience data player for publishers and advertisers. We generate actionable audience data on more than 150 million users and process more than 10 billion data events every month. By partnering with more than 100.000 sites, blogs, top tier portals, shopping comparison, Ecommerce sites we extract each user's purchase intent, interest and user demographics.
 
-Unleash all the power of the online audience segmentation in your website! Know your website's audience by:
+​Use your online audience segmentation power! ​Improve strategies by learning details such as: 
 
 * Age
-* Brands
-* Clusters
+* Favorite brands
+* Navegg EveryOne's clusters
 * Gender
 * Geolocalization
 * Income
@@ -28,9 +28,9 @@ Unleash all the power of the online audience segmentation in your website! Know 
 * Purchase intent
 * Topics of interest
 
-You can enjoy the advantages of audience segmentation right now: Navegg offers 3 plans that can be hired online, including a completely free-of-charge option. Just choose the one that suits you best and [start using it](http://www.navegg.com/en/analytics/)!
+You can enjoy the advantages of audience segmentation right now: [start using it](http://www.navegg.com/en/analytics/)!
 
-Navegg's plugin for WordPress automatically inserts Navegg's tag on every page of your website - no setup, no code, no hassles.
+Navegg's plugin for WordPress automatically inserts Navegg's ​javascript ​tag on every page of your website - no setup, no code, no hassle.
 
 == Installation ==
 
@@ -55,22 +55,22 @@ http://www.navegg.com/en/client-area/faq/
 == Changelog ==
 
 = 1.0 =
-* Release version
+* Release version.
 
 = 2.0 =
 * Changed to the new Navegg's tag.
 * Added the option to get the Navegg's ID by email registered.
-* Added the option to create new the Navegg's account from wordpress.
-* Added the option to automatic login for new accounts created from wordpress.
+* Added the option to create new the Navegg's account from WordPress.
+* Added the option to automatic login for new accounts created from WordPress.
 
 = 2.1 =
-* bug fix language English
+* Language bug fixes.
 
 = 2.2 =
-* bug fix javascript on link to create new account
+* Account creation bug fixes.
 
 = 3.0 =
-* Links fixed.
+* Links and identity fixes.
 
 == Upgrade Notice ==
 
@@ -82,10 +82,12 @@ http://www.navegg.com/en/client-area/faq/
 * You can create your Navegg account directly through the plugin. If you already have a Navegg account, retrieve your Navegg ID using the registered email.
 
 = 2.1 =
-* bug fix language English
+* Language bug fixes.
 
 = 2.2 =
-* bug fix javascript on link to create new account
+* Account creation bug fixes.
+
+= 3.0 =
+* Links and identity fixes.
 
 `<?php code(); // goes in backticks ?>`
-
