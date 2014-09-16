@@ -1,5 +1,5 @@
 <?php
-        function clrString($s){
+    function clrString($s){
 		$separator = array('_','-',' ');
 		return str_replace($separator,"", $s);
 	}
@@ -7,33 +7,31 @@
 
 	//$nvgLanguage = 'en';
 	$nvgTexts= array();
-	
-	
-	if(!isset($_COOKIE["idioma_nvg"]) ){
+	if($_COOKIE["idioma_nvg"])
+		$_SESSION["idioma_nvg"] = $_COOKIE["idioma_nvg"];
+	else if(!$_SESSION["idioma_nvg"] ){
 		
 		if(strnatcasecmp(clrString(get_bloginfo('language')),'ptBR') == 0 || strnatcasecmp(clrString(get_bloginfo('language')),'br') == 0 ){
-			setcookie('idioma_nvg', 'br', (time() + (30 * 24 * 3600)));
+			$_SESSION["idioma_nvg"] = 'br';
 		}
 		else if(strnatcasecmp(clrString(get_bloginfo('language')),'esES') == 0){
-			setcookie('idioma_nvg', 'es', (time() + (30 * 24 * 3600)));	
+			$_SESSION["idioma_nvg"] = 'es';
 		}
 		else{
-			setcookie('idioma_nvg', 'en', (time() + (30 * 24 * 3600)));	
+			$_SESSION["idioma_nvg"] = 'en';
 		}
 	}
 	
-	//if(isset($_COOKIE["idioma_nvg"])){
-	else{		
-		if(($_COOKIE["idioma_nvg"]) == 'br'){
-			require_once('textsPT_BR.php');
-		}
-		else if(($_COOKIE["idioma_nvg"]) == 'es'){
-			require_once('textsES.php');
-		}
-		else{
-			require_once('textsEN.php');
-		}
-	}	
+	//if(isset($_SESSION["idioma_nvg"])){
+	if(($_SESSION["idioma_nvg"]) == 'br'){
+		require_once('textsPT_BR.php');
+	}
+	else if(($_SESSION["idioma_nvg"]) == 'es'){
+		require_once('textsES.php');
+	}
+	else{
+		require_once('textsEN.php');
+	}
 	
 	//else{		require_once('textsEN.php');	}
 	
