@@ -3,7 +3,7 @@
 Plugin Name: Navegg Analytics
 Plugin URI: http://www.navegg.com/en/analytics
 Description: Know your website's audience by gender, age, income, purchase intent and much more.
-Version: 3.1
+Version: 3.2
 Author: Navegg 
 Author URI: http://www.navegg.com
 License: GPLv2

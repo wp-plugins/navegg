@@ -75,6 +75,9 @@ http://www.navegg.com/en/client-area/faq/
 = 3.1 =
 * Bug fixes.
 
+= 3.2 =
+* Bug fixes.
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -94,6 +97,9 @@ http://www.navegg.com/en/client-area/faq/
 * Links and identity fixes.
 
 = 3.1 =
+* Bug fixes.
+
+= 3.2 =
 * Bug fixes.
 
 `<?php code(); // goes in backticks ?>`
