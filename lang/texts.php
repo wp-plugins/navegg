@@ -8,25 +8,25 @@
 	//$nvgLanguage = 'en';
 	$nvgTexts= array();
 	if($_COOKIE["idioma_nvg"])
-		$_SESSION["idioma_nvg"] = $_COOKIE["idioma_nvg"];
-	else if(!$_SESSION["idioma_nvg"] ){
+		$idioma_nvg = $_COOKIE["idioma_nvg"];
+	else if(!$idioma_nvg ){
 		
 		if(strnatcasecmp(clrString(get_bloginfo('language')),'ptBR') == 0 || strnatcasecmp(clrString(get_bloginfo('language')),'br') == 0 ){
-			$_SESSION["idioma_nvg"] = 'br';
+			$idioma_nvg = 'br';
 		}
 		else if(strnatcasecmp(clrString(get_bloginfo('language')),'esES') == 0){
-			$_SESSION["idioma_nvg"] = 'es';
+			$idioma_nvg = 'es';
 		}
 		else{
-			$_SESSION["idioma_nvg"] = 'en';
+			$idioma_nvg = 'en';
 		}
 	}
 	
-	//if(isset($_SESSION["idioma_nvg"])){
-	if(($_SESSION["idioma_nvg"]) == 'br'){
+	//if(isset($idioma_nvg)){
+	if(($idioma_nvg) == 'br'){
 		require_once('textsPT_BR.php');
 	}
-	else if(($_SESSION["idioma_nvg"]) == 'es'){
+	else if(($idioma_nvg) == 'es'){
 		require_once('textsES.php');
 	}
 	else{
