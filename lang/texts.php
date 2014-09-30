@@ -7,20 +7,24 @@
 
 	//$nvgLanguage = 'en';
 	$nvgTexts= array();
-	if($_COOKIE["idioma_nvg"])
-		$idioma_nvg = $_COOKIE["idioma_nvg"];
-	else if(!$idioma_nvg ){
-		
-		if(strnatcasecmp(clrString(get_bloginfo('language')),'ptBR') == 0 || strnatcasecmp(clrString(get_bloginfo('language')),'br') == 0 ){
-			$idioma_nvg = 'br';
-		}
-		else if(strnatcasecmp(clrString(get_bloginfo('language')),'esES') == 0){
-			$idioma_nvg = 'es';
-		}
-		else{
-			$idioma_nvg = 'en';
-		}
-	}
+    try{
+    	if($_COOKIE["idioma_nvg"])
+    		$idioma_nvg = $_COOKIE["idioma_nvg"];
+    	else if(!$idioma_nvg ){
+    		
+    		if(strnatcasecmp(clrString(get_bloginfo('language')),'ptBR') == 0 || strnatcasecmp(clrString(get_bloginfo('language')),'br') == 0 ){
+    			$idioma_nvg = 'br';
+    		}
+    		else if(strnatcasecmp(clrString(get_bloginfo('language')),'esES') == 0){
+    			$idioma_nvg = 'es';
+    		}
+    		else{
+    			$idioma_nvg = 'en';
+    		}
+    	}
+    }catch(Exception $e){
+        $idioma_nvg = 'en';
+    }
 	
 	//if(isset($idioma_nvg)){
 	if(($idioma_nvg) == 'br'){
