@@ -4,7 +4,7 @@ Donate link: http://www.navegg.com/
 Tags: audience targeting, online audience, audience segmentation, behavioral targeting, web analytics, analytics, demographics, bt
 Requires at least: 2.0.2
 Tested up to: 4.0
-Stable tag: 3.3
+Stable tag: 3.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,9 @@ http://www.navegg.com/en/client-area/faq/
 = 3.3 =
 * Bug fixes.
 
+= 3.3.1 =
+* Bug fixes.
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -106,6 +109,9 @@ http://www.navegg.com/en/client-area/faq/
 * Bug fixes.
 
 = 3.3 =
+* Bug fixes.
+
+= 3.3.1 =
 * Bug fixes.
 
 `<?php code(); // goes in backticks ?>`
