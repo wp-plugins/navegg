@@ -3,6 +3,7 @@ $nvgTexts['nvgMsgAdmIdAlt_1']='¡ID cambiado con éxito!';
 $nvgTexts['nvgMsgAdmIdAlt_2']='¡La información no es válida, por favor introduzca sólo números!';
 $nvgTexts['nvgMsgAdmIdAlt_3']='Al intentar gravar su ID, se error inesperado. Por favor, póngase en contacto con nosotros por correo electrónico: contact@navegg.com';
 $nvgTexts['nvgMsgAdmIdAlt_4']='ID introducido es lo mismo del almacenado. Para gravar un nuevo, introduzca un ID diferente.';
+$nvgTexts['nvgMsgAdmIdAlt_5']='El correo introducida tiene cuentas múltiples, seleccione uno !';
 
 $nvgTexts['nvgMsgAdmNotId_1']='¡Hay menos para que usted conozca a su audiencia!';
 $nvgTexts['nvgMsgAdmNotId_2']='Introduzca su ID';

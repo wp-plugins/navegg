@@ -12,6 +12,8 @@ $nvgTexts['nvgMsgAdmIdAlt_3']='Ops! Ocorreu um erro inesperado ao tentar salvar 
 
 $nvgTexts['nvgMsgAdmIdAlt_4']='ID digitado é igual o armazenado! Para salvar um novo, digite um ID diferente!';
 
+$nvgTexts['nvgMsgAdmIdAlt_5']='O email digitado tem mais de uma conta, selecione uma !';
+
 
 // Mensagem padrão de alerta wordpress! Ativada quando não tem id cadastrado
 

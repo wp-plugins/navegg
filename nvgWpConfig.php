@@ -10,7 +10,7 @@ class NvgWp{
 	//private static $wpdb;
 	private static $info;
 	
-	private static $nvgApiUrl = 'http://api.navdmp.com/partner/index.php?';
+	private static $nvgApiUrl = 'http://cluster.navegg.com/ws/?';
 	private static $nvgApiKey = '3b1eb550948434f6d049a04830188de4';
 	
 	
@@ -90,7 +90,7 @@ class NvgWp{
 		//verifica se é um numerico
 		if(NvgWp::idIsNum($_POST['idNvg'])){            
 	
-			//verifica se id é difernete do que ja estava cadastrado ou default
+			//verifica se id é diferente do que ja estava cadastrado ou default
 			if(!NvgWp::idIsDiference($_POST['idNvg'])){
 			     $msgPost['class'] = 'updtFail';    
 			     $msgPost['msg'] = getTextNvg('nvgMsgAdmIdAlt_4');
@@ -119,22 +119,35 @@ class NvgWp{
 		if($_POST['emNvg']){
 			try{
 				$rep = NvgWp::apiGetId($_POST['emNvg']);				
-				if($rep->{"success"} == "true"){
-					if(!NvgWp::idIsDiference(str_replace(" ","",$rep->{"id_navegg"}))){
-        	                     		$msgPost['class'] = 'updtFail';
-	                             		$msgPost['msg'] = getTextNvg('nvgMsgAdmIdAlt_4');
-                	        	}else if(NvgWp::setIdNvg(str_replace(" ","",$rep->{"id_navegg"}))){
-						//perdeu o retorno do WS (caso tinha cadastrado antes)
-						NvgWp::deleteAutoInNvg();
-                	        	       $msgPost['class'] = 'updtSucess';
-                	        	       $msgPost['msg'] = getTextNvg('nvgMsgAdmIdAlt_1');
-                	        	}else
-                	        	       throw new Exception($uptStatus); 
-				}else
-                                	if(empty($rep))
-                                        	throw new Exception(getTextNvg('nvgMsgAdmInitError_6'));
-                                        else
-						throw new Exception("err");
+				if($rep->{"accid"}){
+					if(!NvgWp::idIsDiference(str_replace(" ","",$rep->{"accid"}))){
+        	            $msgPost['class'] = 'updtFail';
+	                    $msgPost['msg'] = getTextNvg('nvgMsgAdmIdAlt_4');
+                	}else{
+                        $rep->{"accid"} = array_unique($rep->{"accid"});
+                        if(count($rep->{"accid"}) > 1){
+        	                $msgPost['class'] = 'updtFail';
+	                        $msgPost['msg'] = getTextNvg('nvgMsgAdmIdAlt_5');
+                            foreach($rep->{"accid"} as $id){
+	                            $msgPost['msg'] .= '<br>Account ID - <strong>'.$id.'</strong>';
+                            }
+                        }else{
+                            if(NvgWp::setIdNvg($rep->{"accid"}[0])){
+					            //perdeu o retorno do WS (caso tinha cadastrado antes)
+					            NvgWp::deleteAutoInNvg();
+                	            $msgPost['class'] = 'updtSucess';
+                	            $msgPost['msg'] = getTextNvg('nvgMsgAdmIdAlt_1');
+                	        }else{
+                	            throw new Exception($uptStatus); 
+                            }
+                        }
+                    }
+				}else{
+                    if(empty($rep))
+                        	throw new Exception(getTextNvg('nvgMsgAdmInitError_6'));
+                        else
+					    	throw new Exception("err");
+                }
 
 			}catch (Exception $e) {
 		 	   $msgPost['class'] = 'updtFail';
@@ -152,30 +165,38 @@ class NvgWp{
 					
 					$rep = NvgWp::apiNewAcc($name,$email,$siteName,$siteUrl);
 
-					if($rep->{"success"} == "true"){
-                	                        if(!NvgWp::idIsDiference(str_replace(" ","",$rep->{"id_navegg"}))){
-							throw new Exception('dupli');
-                                	        }else if(NvgWp::setIdNvg(str_replace(" ","",$rep->{"id_navegg"}),str_replace(" ","",$rep->{"usr_acess_key"}) )){
-                                        	       $msgPost['class'] = 'updtSucess';
-	                                               $msgPost['msg'] = getTextNvg('nvgMsgAdmIdAlt_1');
-	                                        }else
-	                                               throw new Exception('err');
-					}else
-						if(empty($rep))
-							throw new Exception("wsnull");
-						else
-		                                        throw new Exception("err");
+					if(!@$rep->{"error"}){
 
+                        if(!NvgWp::idIsDiference(str_replace(" ","",$rep->{"acc_id"}))){
+
+                        	throw new Exception('dupli');
+
+                        }else if(NvgWp::setIdNvg(str_replace(" ","",$rep->{"acc_id"}),str_replace(" ","",$rep->{"usr_acess_key"}) )){
+
+                               $msgPost['class'] = 'updtSucess';
+                               $msgPost['msg'] = getTextNvg('nvgMsgAdmIdAlt_1');
+
+                        }else{
+
+                           throw new Exception('err');
+                        }
+
+					}else{
+                        if(empty($rep))
+                            throw new Exception("wsnull");
+						else
+    	                    throw new Exception("err");
+					}
 
 				}catch (Exception $e) {
-					$msgs['err']     = getTextNvg('nvgMsgAdmInitError_7');
-					$msgs['empty']   = getTextNvg('nvgMsgAdmInitError_8');
-					$msgs['dupli']	 = getTextNvg('nvgMsgAdmIdAlt_4');
-					$msgs['wsnull']  = getTextNvg('nvgMsgAdmInitError_6');
+                    $msgs['err']     = getTextNvg('nvgMsgAdmInitError_7');
+                    $msgs['empty']   = getTextNvg('nvgMsgAdmInitError_8');
+                    $msgs['dupli']	 = getTextNvg('nvgMsgAdmIdAlt_4');
+                    $msgs['wsnull']  = getTextNvg('nvgMsgAdmInitError_6');
 
-                	        	$msgPost['class'] = 'updtFail';
-        	                	$msgPost['msg'] = $msgs[$e->getMessage()];
-	                        }
+                    $msgPost['class'] = 'updtFail';
+                    $msgPost['msg'] = $msgs[$e->getMessage()];
+                }
 
 			}//endIfNewNvg
 			
@@ -308,7 +329,6 @@ class NvgWp{
 	           <p>'.getTextNvg('nvgMsgAdmNotId_1').' <a href="admin.php?page=nvg-admin">'.getTextNvg('nvgMsgAdmNotId_2').'</a> '.getTextNvg('nvgMsgAdmNotId_3').'</p>
 	          </div>';
 	
-	//	echo 'teste';	  
 	}
 	
 	
@@ -321,36 +341,48 @@ class NvgWp{
 	 */
 	function apiGetId($email){
 		$url = NvgWp::$nvgApiUrl;
-		$url .= 'part_key='.NvgWp::$nvgApiKey;	
-		$url .= '&usr_email='.urlencode($email);
-		$method = 'GET';
-		$opts = array('http'=>array('method'=>$method));
-		$context = stream_context_create($opts);
-		$content = file_get_contents($url, 0, $context);
+        $url .= 'action=partneruseremail';
+		$url .= '&part_key='.NvgWp::$nvgApiKey;	
+		$url .= '&email='.urlencode($email);
+
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL, $url);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+        $content = curl_exec($ch);
+        curl_close($ch);
 		return json_decode($content);
 		
 	}
 
 
-        /**
-         * New Account
-         */
-        function apiNewAcc($name,$email,$siteName,$siteUrl){
+    /**
+     * New Account
+     */
+    function apiNewAcc($name,$email,$siteName,$siteUrl){
 
-                $url = NvgWp::$nvgApiUrl;
-                $url .= 'part_key='.NvgWp::$nvgApiKey;
-                $url .= '&usr_name='.urlencode($name);
-                $url .= '&usr_email='.urlencode($email);
-                $url .= '&usr_site_name='.urlencode($siteName);
-                $url .= '&usr_domain='.urlencode($siteUrl);
-                $url .= '&usr_language='.urlencode(get_bloginfo('language'));
+	    $url = NvgWp::$nvgApiUrl;
+        $url .= 'action=partneraccount';
+        $fields = array(
+        'usr_name' => $name,
+        'usr_email' => $email,
+        'usr_site_name' => $siteName,
+        'usr_domain' => $siteUrl,
+        'part_key' => NvgWp::$nvgApiKey
+        );
+        $fields_string = '';
+        foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
+        rtrim($fields_string, '&');
 
-                $method = 'POST';
-                $opts = array('http'=>array('method'=>$method));
-                $context = stream_context_create($opts);
-                $content = file_get_contents($url, 0, $context);
-                return json_decode($content);
-        }
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL, $url);
+        curl_setopt($ch,CURLOPT_POST, count($fields));
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+        $content = curl_exec($ch);
+        curl_close($ch);
+
+        return json_decode($content);
+    }
 
 //EndClass
 }

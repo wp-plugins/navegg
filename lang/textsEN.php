@@ -68,4 +68,5 @@ $nvgTexts['nvgMsgAdmIdAlt_1']='ID changed successfully!';
 $nvgTexts['nvgMsgAdmIdAlt_2']='Invalid Information, please enter numbers only.';
 $nvgTexts['nvgMsgAdmIdAlt_3']='Ops! An unexpected error occurred while trying to save your ID, please contact us by e-mail: contact@navegg.com';
 $nvgTexts['nvgMsgAdmIdAlt_4']='The entered ID is the same stored! To save a new, enter a different ID!';
+$nvgTexts['nvgMsgAdmIdAlt_5']='The entered mail has multiples accounts, select one !';
 ?>
