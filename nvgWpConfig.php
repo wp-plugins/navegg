@@ -10,7 +10,7 @@ class NvgWp{
 	//private static $wpdb;
 	private static $info;
 	
-	private static $nvgApiUrl = 'http://cluster.navegg.com/ws/?';
+	private static $nvgApiUrl = 'http://cluster.navegg.com/ws/';
 	private static $nvgApiKey = '3b1eb550948434f6d049a04830188de4';
 	
 	
@@ -339,20 +339,15 @@ class NvgWp{
 	/**
 	 * GET ID Navegg by e-mail
 	 */
-	function apiGetId($email){
-		$url = NvgWp::$nvgApiUrl;
-        $url .= 'action=partneruseremail';
-		$url .= '&part_key='.NvgWp::$nvgApiKey;	
-		$url .= '&email='.urlencode($email);
+    function apiGetId($email){
+        $url = NvgWp::$nvgApiUrl;
+        $url .= '?action=partneruseremail';
+        $url .= '&part_key='.NvgWp::$nvgApiKey;
+        $url .= '&email='.urlencode($email);
+        $content = file_get_contents( $url );
+        return json_decode($content);
 
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL, $url);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
-        $content = curl_exec($ch);
-        curl_close($ch);
-		return json_decode($content);
-		
-	}
+    }
 
 
     /**
@@ -360,26 +355,20 @@ class NvgWp{
      */
     function apiNewAcc($name,$email,$siteName,$siteUrl){
 
-	    $url = NvgWp::$nvgApiUrl;
-        $url .= 'action=partneraccount';
-        $fields = array(
-        'usr_name' => $name,
-        'usr_email' => $email,
-        'usr_site_name' => $siteName,
-        'usr_domain' => $siteUrl,
-        'part_key' => NvgWp::$nvgApiKey
+        $postdata = http_build_query(
+        array(
+            'action' => 'partneraccount',
+            'usr_name' => $name,
+            'usr_email' => $email,
+            'usr_site_name' => $siteName,
+            'usr_domain' => $siteUrl,
+            'part_key' => NvgWp::$nvgApiKey
+        )
         );
-        $fields_string = '';
-        foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
-        rtrim($fields_string, '&');
 
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL, $url);
-        curl_setopt($ch,CURLOPT_POST, count($fields));
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-        $content = curl_exec($ch);
-        curl_close($ch);
+        $opts = array('http' =>array('method'  => 'POST','content' => $postdata));
+        $context = stream_context_create($opts);
+        $content = file_get_contents(NvgWp::$nvgApiUrl, 0, $context);
 
         return json_decode($content);
     }
